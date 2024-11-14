@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tokoh Inspiratif Dunia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Home Page Styles */
+    .home-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #87CEEB;
+      padding: 40px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .home-page h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    .home-page p {
+      font-size: 24px;
+      margin-bottom: 40px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .home-page button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .home-page button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Figures Page Styles */
+    .figures-page {
+      padding: 40px;
+      background-color: #f0f0f0;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .figures-page h2 {
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 40px;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    .figure-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .figure-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .figure-item img {
+      max-width: 200px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .figure-item h3 {
+      font-size: 24px;
+      text-align: center;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    /* Figure Detail Page Styles */
+    .figure-detail-page {
+      padding: 40px;
+      background-color: #fff;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .figure-detail-page .figure-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .figure-detail-page .figure-header img {
+      max-width: 300px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .figure-detail-page .figure-header h1 {
+      font-size: 36px;
+      text-align: center;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    .figure-detail-page .figure-content {
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .figure-detail-page .figure-content p {
+      line-height: 1.6;
+    }
+
+    .figure-detail-page .figure-nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .figure-detail-page .figure-nav button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .figure-detail-page .figure-nav button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <!-- Home Page -->
+  <div class="home-page">
+    <h1>Tokoh Inspiratif Dunia</h1>
+    <p>Jelajahi kisah-kisah luar biasa dari tokoh-tokoh yang telah mengubah dunia.</p>
+    <button onclick="showFiguresPage()">Mulai Jelajah</button>
+  </div>
+
+  <!-- Figures Page -->
+  <div class="figures-page" style="display: none;">
+    <h2>Daftar Tokoh Inspiratif</h2>
+    <div class="figure-grid">
+      <div class="figure-item" onclick="showFigureDetailPage(0)">
+        <img src="18132954745643987124.large.jpg" alt="Mahatma Gandhi">
+        <h3>Mahatma Gandhi</h3>
+      </div>
+      <div class="figure-item" onclick="showFigureDetailPage(1)">
+        <img src="Marie_Curie_(1900).jpg" alt="Marie Curie">
+        <h3>Marie Curie</h3>
+      </div>
+      <div class="figure-item" onclick="showFigureDetailPage(2)">
+        <img src="17274698_803.webp" alt="Nelson Mandela">
+        <h3>Nelson Mandela</h3>
+      </div>
+      <div class="figure-item" onclick="showFigureDetailPage(3)">
+        <img src="https://source.unsplash.com/GcCbIXvGq28" alt="Martin Luther King Jr.">
+        <h3>Martin Luther King Jr.</h3>
+      </div>
+      <div class="figure-item" onclick="showFigureDetailPage(4)">
+        <img src="https://source.unsplash.com/LL1C-JnRx-0" alt="Oprah Winfrey">
+        <h3>Oprah Winfrey</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Figure Detail Page -->
+  <div class="figure-detail-page" style="display: none; background-color: #87CEEB;">
+    <div class="figure-header">
+      <img id="figure-image" src="" alt="">
+      <h1 id="figure-name"></h1>
+    </div>
+    <div class="figure-content">
+      <p id="figure-description"></p>
+    </div>
+    <div class="figure-nav">
+      <button onclick="showPreviousFigure()">Sebelumnya</button>
+      <button onclick="showNextFigure()">Selanjutnya</button>
+    </div>
+  </div>
+
+<script>
+  const figures = [
+    {
+      image: "18132954745643987124.large.jpg",
+      name: "Mahatma Gandhi",
+      description: "Mahatma Gandhi adalah salah satu tokoh paling berpengaruh dalam sejarah. Ia memimpin gerakan kemerdekaan India melalui perlawanan non-kekerasan dan menjadi simbol perdamaian dan keadilan di seluruh dunia. Gandhi dikenal dengan pakaiannya yang sederhana, gaya hidup yang asketik, dan prinsip-prinsip ahinsa (non-kekerasan) dan satyagraha (perlawanan sipil) yang ia perjuangkan. Gerakannya menginspirasi banyak aktivis hak asasi manusia di seluruh dunia."
+    },
+    {
+      image: "Marie_Curie_(1900).jpg",
+      name: "Marie Curie",
+      description: "Marie Curie adalah seorang fisikawan dan kimiawan Polandia yang terkenal dengan penemuan radium dan polonium. Ia menjadi ilmuwan perempuan pertama yang memenangkan Hadiah Nobel dan merupakan inspirasi bagi banyak orang, terutama perempuan, untuk terjun ke dunia sains. Curie adalah seorang pioneer dalam bidang radioaktivitas dan telah memberikan kontribusi besar pada ilmu pengetahuan. Ia dikenal dengan ketekunan dan integritasnya dalam menjalankan penelitian ilmiah."
+    },
+    {
+      image: "17274698_803.webp",
+      name: "Nelson Mandela",
+      description: "Nelson Mandela adalah pemimpin gerakan anti-apartheid di Afrika Selatan dan menjadi presiden pertama Afrika Selatan yang terpilih secara demokratis. Ia dikenal sebagai tokoh yang memperjuangkan kesetaraan dan perdamaian di negaranya. Mandela menghabiskan 27 tahun di penjara karena perjuangannya, namun setelah dibebaskan, ia memimpin transisi Afrika Selatan menuju demokrasi dan menjadi simbol rekonsiliasi di negaranya."
+    },
+    {
+      image: "https://source.unsplash.com/GcCbIXvGq28",
+      name: "Martin Luther King Jr.",
+      description: "Martin Luther King Jr. adalah seorang aktivis hak-hak sipil Afrika-Amerika yang terkenal dengan pidato-pidatonya yang menginspirasi. Ia memimpin gerakan non-kekerasan untuk menuntut hak-hak persamaan bagi orang kulit hitam di Amerika Serikat. King adalah seorang pendeta Baptist yang memperjuangkan keadilan sosial dan penghapusan diskriminasi rasial melalui prinsip-prinsip non-kekerasan yang diilhami oleh Mahatma Gandhi."
+    },
+    {
+      image: "https://source.unsplash.com/LL1C-JnRx-0",
+      name: "Oprah Winfrey",
+      description: "Oprah Winfrey adalah seorang presenter televisi, penulis, dan filantrop Amerika Serikat yang memiliki pengaruh besar di seluruh dunia. Ia dikenal sebagai seorang pembicara yang inspiratif dan telah banyak membantu orang-orang di seluruh dunia melalui program-programnya. Winfrey berasal dari latar belakang yang sulit, namun ia berhasil menjadi salah satu perempuan berpengaruh"
+    }
+  ];
+
+  let currentFigureIndex = 0;
+
+  function showFiguresPage() {
+    document.querySelector('.home-page').style.display = 'none';
+    document.querySelector('.figures-page').style.display = 'block';
+  }
+
+  function showFigureDetailPage(index) {
+    currentFigureIndex = index;
+    document.querySelector('.figures-page').style.display = 'none';
+    document.querySelector('.figure-detail-page').style.display = 'block';
+    document.getElementById('figure-image').src = figures[index].image;
+    document.getElementById('figure-name').textContent = figures[index].name;
+    document.getElementById('figure-description').textContent = figures[index].description;
+  }
+
+  function showPreviousFigure() {
+    currentFigureIndex = (currentFigureIndex - 1 + figures.length) % figures.length;
+    showFigureDetailPage(currentFigureIndex);
+  }
+
+  function showNextFigure() {
+    currentFigureIndex = (currentFigureIndex + 1) % figures.length;
+    showFigureDetailPage(currentFigureIndex);
+  }
+</script>
+</body>
+</html>
